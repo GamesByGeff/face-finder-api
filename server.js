@@ -37,6 +37,6 @@ app.put('/image', (req, res) => { image.handleImage(req, res, db) })
 
 app.post('/imageurl', (req, res) => { image.handleApiCall(req, res,) })
 
-app.listen(3001, () => {
-    console.log('app running on port 3001');
+app.listen(procss.env.PORT || 3001, () => {
+    console.log(`ITS ALIVE on port ${process.env.PORT}`);
 })
